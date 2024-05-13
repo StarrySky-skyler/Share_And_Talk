@@ -1,0 +1,35 @@
+name: Update README and publish release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set Git Config
+        run: |
+          git config --global user.name "Starry Trace Sky"
+          git config --global user.email "starrytracesky@qq.com"
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.2'
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Run Python script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/workflows/update_md.py

@@ -1,0 +1,45 @@
+
+/* 文章底部 */
+.share-area {
+    position: relative;
+    display: inline-block;
+}
+
+.share-content {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    bottom: 40px;
+    right: 50%;
+    transform: translateX(50%);
+    transition: height 1s ease;
+    border-radius: 10px;
+}
+
+.share-area:hover .share-content {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    height: 84px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.share-content ul li span {
+    align-items: end;
+}
+
+.share-content ul li {
+    list-style-type: none;
+    width: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 74px;
+}
+
+.share-content ul {
+    padding-left: 0;
+}
