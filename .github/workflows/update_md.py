@@ -50,15 +50,10 @@ def updateMD(file):
         f.write(Content)
 
 @pysnooper.snoop()
-def commitMD():
+def release():
     """提交更改"""
     # 获取最新的提交对象
     latestCommit = repo.get_commits()[0]
-
-    # commit changes
-    call(['git', 'add', '.'])
-    call(['git', 'commit', '-m', 'docs[bot]: Auto update README.md'])
-    call(['git', 'push', 'origin', 'main'])
 
     # create release
 
@@ -70,7 +65,6 @@ def commitMD():
     repo.create_git_release(tag=tagName, name=tagName, message=tagMessage)
 
 if __name__ == '__main__':
-    call(['git', 'checkout', 'main'])
     updateMD('README.md')
     updateMD('README_zh_cn.md')
-    commitMD()
+    release()
