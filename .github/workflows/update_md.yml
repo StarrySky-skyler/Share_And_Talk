@@ -40,7 +40,7 @@ jobs:
         run: |
           git add -A
           git commit -m "docs[bot]: Auto update README.md"
-          git merge origin/develop
           git push origin main
           git checkout --track origin/develop
+          git merge origin/main
           git push origin develop
