@@ -27,7 +27,7 @@ repo = g.get_repo('StarrySky-skyler/Share_And_Talk')
 latestTag = repo.get_tags()[0]
 tagName = latestTag.name
 
-@pysnooper.snoop
+@pysnooper.snoop()
 def updateMD(file):
     """
     update README
@@ -49,7 +49,7 @@ def updateMD(file):
     with open(file, 'w', encoding='utf-8') as f:
         f.write(Content)
 
-@pysnooper.snoop
+@pysnooper.snoop()
 def commitMD():
     """提交更改"""
     # 获取最新的提交对象
