@@ -20,6 +20,7 @@ jobs:
         run: |
           git config --global user.name "Starry Trace Sky"
           git config --global user.email "starrytracesky@qq.com"
+          git checkout main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,7 +30,16 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
 
-      - name: Run Python script
+      - name: Update README and Publish Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/workflows/update_md.py
+      
+      - name: Commit, merge and push changes
+        run: |
+          git add -A
+          git commit -m "docs[bot]: Auto update README.md"
+          git merge develop
+          git push origin main
+          git checkout develop
+          git push origin develop
