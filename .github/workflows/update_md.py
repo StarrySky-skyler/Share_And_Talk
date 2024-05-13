@@ -70,6 +70,7 @@ def commitMD():
     repo.create_git_release(tag=tagName, name=tagName, message=tagMessage)
 
 if __name__ == '__main__':
+    call(['git', 'checkout', 'main'])
     updateMD('README.md')
     updateMD('README_zh_cn.md')
     commitMD()
