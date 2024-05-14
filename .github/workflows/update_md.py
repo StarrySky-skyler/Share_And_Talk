@@ -18,7 +18,7 @@ import pysnooper
 
 
 with pysnooper.snoop():
-    pattern = r"v\d+\.\d+\.\d+"
+    pattern = r"-+(v\d+\.\d+\.\d+.*)-+"
     # github token
     token = os.environ.get('GITHUB_TOKEN')
     g = Github(token)
