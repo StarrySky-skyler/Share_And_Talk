@@ -53,6 +53,7 @@
             })
             var bkbt = document.getElementById('bk');
             bkbt.addEventListener('click', function(){
+                bkbt.disabled = true;
                 window.location.href = "{% url 'api:backup' %}";
             })
             var loggoutbt = document.getElementById('logoutBt');
@@ -135,16 +136,16 @@
                     <div class="p-2 bg-white fw-bolder" style="margin-bottom:2px;">关于开发者(非文章作者)</div>
                     <div class="bg-white p-2">
                         <div class="developer py-1 ps-1">
-                            <img class="rounded-circle float-start me-3" src="{% static 'blog/images/author2.jpg' %}"
+                            <img class="rounded-circle float-start me-3" src="{% static 'blog/images/author1.jpg' %}"
                                  height="50px">
                             <div class="info clearfix">
-                                <i class="bi bi-person-circle"></i>Skyler
-                                <p class="text-secondary m-0"><small>进可攻AI,退可守后端</small></p>
+                                <i class="bi bi-person-circle"></i>星痕Sky
+                                <p class="text-secondary m-0"><small>进可攻VR,退可守AI</small></p>
                             </div>
                         </div>
         
                         <div class="developer p-2" style="border-top: 1px dashed grey;">
-                            <img class="rounded-circle float-start me-3" src="{% static 'blog/images/author3.jpg' %}"
+                            <img class="rounded-circle float-start me-3" src="{% static 'blog/images/author2.jpg' %}"
                                  height="50px">
                             <div class="info clearfix">
                                 <i class="bi bi-person-circle"></i>Xu Jia-qi
@@ -157,7 +158,7 @@
         
                             <a href="/admin" class="btn btn-sm btn-outline-primary">登录后台</a>
         
-                            <a href="https://github.com/Skyler-Sun/" class="btn btn-sm btn-outline-primary text-nowrap"
+                            <a href="https://github.com/StarrySky-skyler/" class="btn btn-sm btn-outline-primary text-nowrap"
                                target="_blank">后端开发者详情</a>
                             <a href="https://github.com/XuJiaqi999" class="btn btn-sm btn-outline-primary text-nowrap"
                                target="_blank">前端开发者详情</a>
