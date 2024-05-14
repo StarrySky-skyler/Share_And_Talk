@@ -10,7 +10,7 @@
 ![](https://img.shields.io/badge/许可证-MIT-red)
 ![](https://img.shields.io/badge/后端程序-Python-blue)
 ![](https://img.shields.io/badge/框架-Django-yellow)
-![](https://img.shields.io/badge/最新版本-v1.4.14_alpha-alpha-brightgreen)
+![](https://img.shields.io/badge/最新版本-v1.4.14_alpha-brightgreen)
 
 ![网站主页](example.png)
 
