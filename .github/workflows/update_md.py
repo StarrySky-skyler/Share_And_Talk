@@ -12,20 +12,20 @@
 import re
 import os
 import sys
-from subprocess import call
 from github import Github
 
 import pysnooper
 
 
-pattern = r"v\d+\.\d+\.\d+"
-# github token
-token = os.environ.get('GITHUB_TOKEN')
-g = Github(token)
-# latest tag
-repo = g.get_repo('StarrySky-skyler/Share_And_Talk')
-latestTag = repo.get_tags()[0]
-tagName = latestTag.name
+with pysnooper.snoop():
+    pattern = r"v\d+\.\d+\.\d+"
+    # github token
+    token = os.environ.get('GITHUB_TOKEN')
+    g = Github(token)
+    # latest tag
+    repo = g.get_repo('StarrySky-skyler/Share_And_Talk')
+    latestTag = repo.get_tags()[0]
+    tagName = latestTag.name
 
 @pysnooper.snoop()
 def updateMD(file):
@@ -33,6 +33,8 @@ def updateMD(file):
     update README
     param: file: README path
     """
+    global tagName
+
     with open(file, encoding='utf-8') as f:
         content = f.readlines()
     Content = ''.join(content)
