@@ -1,9 +1,12 @@
 name: Update README and publish release
+run-name: Auto update README and publish release - ${{ github.event.head_commit.message }}
 
 on:
   push:
     tags:
       - 'v*.*.*'
+
+  workflow_dispatch:
 
 jobs:
   main:
@@ -21,7 +24,7 @@ jobs:
           git config --global user.name "Starry Trace Sky"
           git config --global user.email "starrytracesky@qq.com"
           git remote update
-          git checkout --track origin/main
+          git checkout --track origin/develop
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,7 +32,7 @@ jobs:
           python-version: '3.11.2'
 
       - name: Install requirements
-        run: pip install -r requirements.txt
+        run: pip install -r requirements_action_update_md.txt
 
       - name: Update README and Publish Release
         env:
@@ -40,7 +43,7 @@ jobs:
         run: |
           git add -A
           git commit -m "docs[bot]: Auto update README.md"
-          git push origin main
-          git checkout --track origin/develop
-          git merge origin/main
           git push origin develop
+          git checkout --track origin/main
+          git merge origin/develop
+          git push origin main

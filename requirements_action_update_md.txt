@@ -1,0 +1,2 @@
+PySnooper==1.1.1
+PyGithub==1.58.2
