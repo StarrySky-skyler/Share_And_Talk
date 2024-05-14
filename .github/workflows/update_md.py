@@ -33,6 +33,8 @@ def updateMD(file):
     update README
     param: file: README path
     """
+    global tagName
+
     with open(file, encoding='utf-8') as f:
         content = f.readlines()
     Content = ''.join(content)
