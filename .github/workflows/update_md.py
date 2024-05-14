@@ -43,6 +43,9 @@ def updateMD(file):
         print("Info: README is up to date. No need to update again.")
         sys.exit()
 
+    if '-' in tagName:
+        tagName = tagName.replace('-', '_')
+
     Content = re.sub(pattern, tagName, Content)
 
     # update REAMDE.md
