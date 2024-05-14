@@ -17,14 +17,15 @@ from github import Github
 import pysnooper
 
 
-pattern = r"v\d+\.\d+\.\d+"
-# github token
-token = os.environ.get('GITHUB_TOKEN')
-g = Github(token)
-# latest tag
-repo = g.get_repo('StarrySky-skyler/Share_And_Talk')
-latestTag = repo.get_tags()[0]
-tagName = latestTag.name
+with pysnooper.snoop():
+    pattern = r"v\d+\.\d+\.\d+"
+    # github token
+    token = os.environ.get('GITHUB_TOKEN')
+    g = Github(token)
+    # latest tag
+    repo = g.get_repo('StarrySky-skyler/Share_And_Talk')
+    latestTag = repo.get_tags()[0]
+    tagName = latestTag.name
 
 @pysnooper.snoop()
 def updateMD(file):
@@ -66,8 +67,7 @@ def release():
         tagMessage = tagName
     repo.create_git_release(tag=tagName, name=tagName, message=tagMessage)
 
-with pysnooper.snoop():
-    if __name__ == '__main__':
-        updateMD('README.md')
-        updateMD('README_zh_cn.md')
-        release()
+if __name__ == '__main__':
+    updateMD('README.md')
+    updateMD('README_zh_cn.md')
+    release()
