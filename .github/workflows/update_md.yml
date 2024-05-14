@@ -21,7 +21,6 @@ jobs:
           git config --global user.name "Starry Trace Sky"
           git config --global user.email "starrytracesky@qq.com"
           git remote update
-          git checkout --track origin/main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,7 +39,4 @@ jobs:
         run: |
           git add -A
           git commit -m "docs[bot]: Auto update README.md"
-          git push origin main
-          git checkout --track origin/develop
-          git merge origin/main
-          git push origin develop
+          git push
