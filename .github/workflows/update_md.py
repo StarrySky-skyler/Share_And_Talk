@@ -49,7 +49,6 @@ def updateMD(file):
     if '-' in tagName:
         tagName = tagName.replace('-', '_')
 
-    tagName = '-' + tagName + '-'
     Content = re.sub(pattern, tagName, Content)
 
     # update REAMDE.md
