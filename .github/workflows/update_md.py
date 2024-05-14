@@ -12,7 +12,6 @@
 import re
 import os
 import sys
-from subprocess import call
 from github import Github
 
 import pysnooper
@@ -25,10 +24,10 @@ g = Github(token)
 # latest tag
 repo = g.get_repo('StarrySky-skyler/Share_And_Talk')
 latestTag = repo.get_tags()[0]
-tagName = latestTag.name
+_tagName = latestTag.name
 
 @pysnooper.snoop()
-def updateMD(file):
+def updateMD(file, tagName):
     """
     update README
     param: file: README path
@@ -53,7 +52,7 @@ def updateMD(file):
         f.write(Content)
 
 @pysnooper.snoop()
-def release():
+def release(tagName):
     """提交更改"""
     # 获取最新的提交对象
     latestCommit = repo.get_commits()[0]
@@ -68,6 +67,6 @@ def release():
     repo.create_git_release(tag=tagName, name=tagName, message=tagMessage)
 
 if __name__ == '__main__':
-    updateMD('README.md')
-    updateMD('README_zh_cn.md')
-    release()
+    updateMD('README.md', _tagName)
+    updateMD('README_zh_cn.md', _tagName)
+    release(_tagName)
