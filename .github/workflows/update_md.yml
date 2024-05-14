@@ -1,17 +1,13 @@
 name: Update README and publish release
+run-name: Auto update README and publish release - ${{ github.event.head_commit.message }}
 
 on:
   push:
-    branches:
-      - hotfix
     tags:
       - 'v*.*.*'
 
-
-
 jobs:
   main:
-    name: Auto update README - ${{ github.event.head_commit.message }}
     runs-on: ubuntu-latest
 
     permissions:
@@ -26,6 +22,7 @@ jobs:
           git config --global user.name "Starry Trace Sky"
           git config --global user.email "starrytracesky@qq.com"
           git remote update
+          echo "::debug::GITHUB_REF_NAME is $GITHUB_REF_NAME"
 
       - name: Set up Python
         uses: actions/setup-python@v5
