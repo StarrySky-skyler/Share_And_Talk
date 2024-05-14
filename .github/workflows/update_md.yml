@@ -2,6 +2,8 @@ name: Update README and publish release
 
 on:
   push:
+    branches:
+      - hotfix
     tags:
       - 'v*.*.*'
 
@@ -9,6 +11,7 @@ on:
 
 jobs:
   main:
+    name: Auto update README - ${{ github.event.head_commit.message }}
     runs-on: ubuntu-latest
 
     permissions:
