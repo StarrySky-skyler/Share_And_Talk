@@ -6,6 +6,8 @@ on:
     tags:
       - 'v*.*.*'
 
+  workflow_dispatch:
+
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -22,7 +24,7 @@ jobs:
           git config --global user.name "Starry Trace Sky"
           git config --global user.email "starrytracesky@qq.com"
           git remote update
-          echo "::debug::GITHUB_REF_NAME is $GITHUB_REF_NAME"
+          git checkout --track origin/develop
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -41,4 +43,7 @@ jobs:
         run: |
           git add -A
           git commit -m "docs[bot]: Auto update README.md"
-          git push
+          git push origin develop
+          git checkout --track origin/main
+          git merge origin/develop
+          git push origin main
