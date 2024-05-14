@@ -10,7 +10,7 @@ English | [中文(简体)](./README_zh_cn.md)
 ![](https://img.shields.io/badge/License-MIT-red)
 ![](https://img.shields.io/badge/Program-Python-blue)
 ![](https://img.shields.io/badge/Framework-Django-yellow)
-![](https://img.shields.io/badge/Latest_Versionv1.4.16_stablebrightgreen)
+![](https://img.shields.io/badge/Latest_Version-v1.4.16_stable-brightgreen)
 
 ![Website Homepage](example.png)
 
