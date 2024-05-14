@@ -26,6 +26,7 @@ with pysnooper.snoop():
     repo = g.get_repo('StarrySky-skyler/Share_And_Talk')
     latestTag = repo.get_tags()[0]
     tagName = latestTag.name
+    originTagName = latestTag.name
 
 @pysnooper.snoop()
 def updateMD(file):
@@ -58,6 +59,7 @@ def updateMD(file):
 def release():
     """提交更改"""
     # 获取最新的提交对象
+    global originTagName
     latestCommit = repo.get_commits()[0]
 
     # create release
@@ -66,8 +68,8 @@ def release():
     try:
         tagMessage = latestCommit.commit.message
     except AttributeError:
-        tagMessage = tagName
-    repo.create_git_release(tag=tagName, name=tagName, message=tagMessage)
+        tagMessage = originTagName
+    repo.create_git_release(tag=originTagName, name=originTagName, message=tagMessage)
 
 if __name__ == '__main__':
     updateMD('README.md')
