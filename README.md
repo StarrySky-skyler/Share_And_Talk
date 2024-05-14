@@ -36,7 +36,7 @@ English | [中文(简体)](./README_zh_cn.md)
 
 ```bash
 pip install wheel
-git clone https://github.com/Skyler-Sun/Share_And_Talk.git
+git clone https://github.com/StarrySky-skyler/Share_And_Talk.git
 ```
 
 ### 2.1.2 Install dependencies
@@ -76,6 +76,26 @@ Enter commands below
 ```bash
 py manage.py makemigrations
 py manage.py migrate
+```
+
+Import example database
+
+```bash
+py manage.py loaddata backup/example.json
+```
+
+Notice: 
+
+the example database contains 
+
+1. a superuser. Its username is root, password is skyler
+
+2. a help page
+
+3. some default categories
+
+
+```bash
 ```
 
 ### 2.1.4 Configure language and timezone

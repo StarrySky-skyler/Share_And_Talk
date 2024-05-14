@@ -35,7 +35,7 @@
 ### 2.1.1 克隆项目至本地
 
 ```bash
-git clone https://github.com/Skyler-Sun/Share_And_Talk.git
+git clone https://github.com/StarrySky-skyler/Share_And_Talk.git
 ```
 
 ### 2.1.2 安装依赖
@@ -77,6 +77,22 @@ DEFAULT_FROM = 'Your email'
 py manage.py makemigrations
 py manage.py migrate
 ```
+
+导入示例数据库
+
+```bash
+py manage.py loaddata backup/example.json
+```
+
+注意:
+
+示例数据库包含
+
+1. 一个初始超级管理员, 账号是 root, 密码是 skyler
+
+2. 一个帮助页面
+
+3. 一些默认分类
 
 ### 2.1.4 配置语言与时区
 
