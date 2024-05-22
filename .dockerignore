@@ -36,7 +36,7 @@ README_zh_cn.md
 
 **/.pytest_cache
 **/.github
-**/example.png
-**/info.log
-**/mod_wsgi-4.9.2-cp311-cp311-win_amd64.whl
+example.png
+info.log
+mod_wsgi-4.9.2-cp311-cp311-win_amd64.whl
 requirements_action_update_md.txt
