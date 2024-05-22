@@ -30,7 +30,41 @@
 
 # 2. 安装🍔
 
-## 2.1 方式一：手动安装
+## 2.0 方式一: docker 安装(推荐)
+
+> 请先安装好 docker
+
+### 2.0.1 克隆项目至本地
+
+```bash
+git clone https://github.com/StarrySky-skyler/Share_And_Talk.git
+```
+
+### 2.0.2 运行
+
+终端`cd`进入项目根目录, 输入以下命令启动
+
+```bash
+docker compose up -d
+```
+
+### 2.0.3 关闭
+
+输入以下命令停止运行
+
+```bash
+docker compose stop
+```
+
+### 2.0.4 删除服务
+
+输入以下命令删除容器
+
+```bash
+docker compose down
+```
+
+## 2.1 方式二：手动安装
 
 ### 2.1.1 克隆项目至本地
 
@@ -55,9 +89,9 @@ pip install -r requirements.txt
 
 ```python
 # Database settings
-dbName = 'Your database name'
-dbUser = 'Your account name'
-dbPassword = 'Your password'
+dbName = 'share_and_talk'
+dbUser = 'root'
+dbPassword = 'skyler'
 # Email settings
 EMAIL_USER = 'Your email'
 EMAIL_PASSWORD = 'Your password'
@@ -133,9 +167,9 @@ LANGUAGES = [
 
 ```python
 # Database settings
-dbName = 'Your database name'
-dbUser = 'Your account name'
-dbPassword = 'Your password'
+dbName = 'share_and_talk'
+dbUser = 'root'
+dbPassword = 'skyler'
 # Email settings
 EMAIL_USER = 'Your email'
 EMAIL_PASSWORD = 'Your password'

@@ -30,7 +30,35 @@ English | [中文(简体)](./README_zh_cn.md)
 
 # 2. Installation🍔
 
-## 2.1 Method 1: Manual Installation
+## 2.0 Docker Installation(recommended)
+
+> Please install docker first
+
+### 2.0.1 Clone project
+
+```bash
+git clone https://github.com/StarrySky-skyler/Share_And_Talk.git
+```
+
+### 2.0.2 Run
+
+```bash
+docker compose up -d
+```
+
+### 2.0.3 Stop
+
+```bash
+docker compose stop
+```
+
+### 2.0.4 Delete services
+
+```bash
+docker compose down
+```
+
+## 2.1 Method 2: Manual Installation
 
 ### 2.1.1 Clone the project to local
 
@@ -55,9 +83,9 @@ Open `ShareAndTalk/config.py`
 
 ```python
 # Database settings
-dbName = 'Your database name'
-dbUser = 'Your account name'
-dbPassword = 'Your password'
+dbName = 'share_and_talk'
+dbUser = 'root'
+dbPassword = 'skyler'
 # Email settings
 EMAIL_USER = 'Your email'
 EMAIL_PASSWORD = 'Your password'
@@ -137,9 +165,9 @@ Open `ShareAndTalk/config.py`
 
 ```python
 # Database settings
-dbName = 'Your database name'
-dbUser = 'Your account name'
-dbPassword = 'Your password'
+dbName = 'share_and_talk'
+dbUser = 'root'
+dbPassword = 'skyler'
 # Email settings
 EMAIL_USER = 'Your email'
 EMAIL_PASSWORD = 'Your password'
