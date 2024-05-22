@@ -53,6 +53,23 @@
                         class="bi bi-caret-right-fill"></i>帮助</a>
                 <a href="https://github.com/StarrySky-skyler/Share_And_Talk" class="btn btn-outline-secondary btn-sm text-uppercase"><i
                         class="bi bi-caret-right-fill"></i>github</a>
+                {% csrf_token %}
+                <div id="cloud-music-container">
+                <iframe id="cloud-music-iframe" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2102108609&auto=1&height=66"></iframe>
+                </div>
+                <style>
+                    #container {
+                        position: relative;
+                        height: 100%; /* 占满整个视口高度 */
+                        width: 100%; /* 占满整个视口宽度 */
+                    }
+
+                    #cloud-music-iframe {
+                        position: fixed;
+                        top: 87%; /* 距离顶部的距离 */
+                        left: 1%; /* 距离左侧的距离 */
+                    }
+                </style>
                 <script>
                     function showContact() {
                         var contact = document.getElementById('contactModal');

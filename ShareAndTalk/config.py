@@ -1,7 +1,7 @@
 # Database settings
-dbName = 'Your database name'
-dbUser = 'Your account name'
-dbPassword = 'Your password'
+dbName = 'share_and_talk'
+dbUser = 'root'
+dbPassword = 'skyler'
 # Email settings
 EMAIL_USER = 'Your email'
 EMAIL_PASSWORD = 'Your password'
