@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # 等待 MySQL 服务和数据库准备就绪
-echo "等待 MySQL 服务启动..."
-/usr/local/bin/wait-for-it.sh mysql:3306 -t 0
 echo "等待数据库准备就绪..."
 python3 manage.py check
 while [ $? -ne 0 ]; do

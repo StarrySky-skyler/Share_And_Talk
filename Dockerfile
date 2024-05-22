@@ -9,10 +9,6 @@
 ARG PYTHON_VERSION=3.11.2
 FROM python:${PYTHON_VERSION}-slim as base
 
-# 安装 wait-for-it.sh
-ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /usr/local/bin/wait-for-it.sh
-RUN chmod +x /usr/local/bin/wait-for-it.sh
-
 # Prevents Python from writing pyc files.
 ENV PYTHONDONTWRITEBYTECODE=1
 
