@@ -43,11 +43,11 @@
     <!-- js -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
     <!--markdown组件-->
-    <link rel="stylesheet" href="{% static 'blog/markdown/css/editormd.preview.css' %}"/>
-    <link rel="stylesheet" href="{% static 'blog/markdown/css/editormd.min.css' %}"/>
+    <link rel="stylesheet" href="https://pandao.github.io/editor.md/css/editormd.preview.css"/>
+    <link rel="stylesheet" href="https://pandao.github.io/editor.md/css/editormd.min.css"/>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 
-    <script type="text/javascript" src="{% static 'blog/markdown/editormd.js' %}"></script>
+    <script type="text/javascript" src="https://pandao.github.io/editor.md/editormd.js"></script>
     <script type="text/javascript">
         $(function () {
             editormd("editor", {
@@ -68,7 +68,7 @@
                     })
                 },
                 syncScrolling: "single",
-                path: "{% static 'blog/markdown/lib/' %}",
+                path: "https://pandao.github.io/editor.md/lib/",
                 // theme
                 theme: "default",
                 previewTheme: "default",
@@ -153,7 +153,7 @@
 
         @font-face {
             font-family: Cookie;
-            src: url('{% static 'blog/font/Cookie/Cookie-Regular.ttf' %}');
+            src: url("{% static 'blog/font/Cookie/Cookie-Regular.ttf' %}");
         }
 
         @font-face {
@@ -171,19 +171,19 @@
         }
 
         .item1 {
-            background-image: url({% static 'blog/images/image/head.png' %});
+            background-image: url("{% static 'blog/images/image/head.png' %}");
             background-position: center center;
             background-size: cover;
         }
 
         .item2 {
-            background-image: url({% static 'blog/images/image/head2.jpg' %});
+            background-image: url("{% static 'blog/images/image/head2.jpg' %}");
             background-position: center center;
             background-size: cover;
         }
 
         .item3 {
-            background-image: url({% static 'blog/images/image/head3.jpg' %});
+            background-image: url("{% static 'blog/images/image/head3.jpg' %}");
             background-position: center bottom;
             background-size: cover;
         }
