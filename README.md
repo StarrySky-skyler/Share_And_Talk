@@ -7,7 +7,7 @@ English | [中文(简体)](./README_zh_cn.md)
 ![](https://img.shields.io/badge/Backend_Developer-星痕Sky-blue)
 ![](https://img.shields.io/badge/Frontend_Developer-XuJiaqi999-purple)
 
-![](https://img.shields.io/badge/License-MIT-red)
+![](https://img.shields.io/badge/License-GPL_3.0-red)
 ![](https://img.shields.io/badge/Program-Python-blue)
 ![](https://img.shields.io/badge/Framework-Django-yellow)
 
