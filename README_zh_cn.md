@@ -7,7 +7,7 @@
 ![](https://img.shields.io/badge/后端开发-星痕Sky-blue)
 ![](https://img.shields.io/badge/前端开发-XuJiaqi999-purple)
 
-![](https://img.shields.io/badge/许可证-MIT-red)
+![](https://img.shields.io/badge/许可证-GPL_3.0-red)
 ![](https://img.shields.io/badge/后端程序-Python-blue)
 ![](https://img.shields.io/badge/框架-Django-yellow)
 
